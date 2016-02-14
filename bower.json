@@ -1,0 +1,12 @@
+{
+  "name": "node-velbus-client",
+  "description": "Velbus home automation application client",
+  "main": "dist/js/client.min.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootbox.js": "bootbox#^4.4.0",
+    "bootstrap-toggle": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
+  }
+}

@@ -1,0 +1,33 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Velbus client
+    link(href='/vendor/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/vendor/css/bootstrap-toggle.min.css', rel='stylesheet')
+
+  body
+    div.page-header
+      h1 Velbus client
+
+    ol.breadcrumb
+      li
+        a(href='/') Home
+      li.active !{room.name}
+
+    each component in room.components
+      div.panel.panel-default
+        div.panel-heading !{component.name}
+        div.panel-body
+          div.velbus(
+            data-module=component.module
+            data-address=component.address
+            data-channel=component.channel
+          )
+
+    script(src='/vendor/js/jquery.min.js' type='text/javascript')
+    script(src='/vendor/js/bootstrap.min.js' type='text/javascript')
+    script(src='/vendor/js/bootstrap-toggle.min.js' type='text/javascript')
+    script(src='/vendor/js/bootbox.min.js' type='text/javascript')
+    script(src='/js/config.js' type='text/javascript')
+    script(src='/js/app.min.js' type='text/javascript')

@@ -1,0 +1,23 @@
+{
+  "name": "node-velbus-client",
+  "version": "0.0.2",
+  "description": "Velbus home automation application client",
+  "dependencies": {
+    "bootbox": "^4.4.0",
+    "bootstrap": "^3.3.6",
+    "bootstrap-switch": "^3.3.2",
+    "express": "^4.13.4",
+    "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
