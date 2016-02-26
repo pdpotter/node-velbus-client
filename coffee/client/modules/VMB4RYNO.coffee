@@ -15,14 +15,14 @@ class VMB4RYNO
     do checkbox.bootstrapToggle
 
     # send message to change relay status
-    checkbox.change =>
-      if checkbox.prop 'checked'
+    checkbox.change ->
+      if $(this).prop 'checked'
         # don't update the element until the action is confirmed
-        @element.find('input').data('bs.toggle').off(true)
+        $(this).data('bs.toggle').off(true)
         message.command = 'switch_relay_on'
       else
         # don't update the element until the action is confirmed
-        @element.find('input').data('bs.toggle').on(true)
+        $(this).data('bs.toggle').on(true)
         message.command = 'switch_relay_off'
       send JSON.stringify message
       return
