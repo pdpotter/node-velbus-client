@@ -52,16 +52,18 @@ gulp.task 'bootbox', ->
 gulp.task 'vendor-javascript', ->
   gulp.start 'bootbox'
   return gulp.src([
+    'bower_components/bootstrap/dist/js/bootstrap.min.js'
+    'bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js'
     'bower_components/jquery/dist/jquery.min.js'
-    'bower_components/bootstrap/dist/js/bootstrap.min.js',
-    'bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js',
+    'bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js'
   ])
   .pipe(gulp.dest 'public/vendor/js')
 
 gulp.task 'vendor-css', ->
   return gulp.src([
     'bower_components/bootstrap/dist/css/bootstrap.min.css'
-    'bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css',
+    'bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css'
+    'bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css'
   ])
   .pipe(gulp.dest 'public/vendor/css')
 

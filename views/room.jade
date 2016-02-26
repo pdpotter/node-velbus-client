@@ -4,6 +4,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title Velbus client
     link(href='/vendor/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/vendor/css/bootstrap-slider.min.css', rel='stylesheet')
     link(href='/vendor/css/bootstrap-toggle.min.css', rel='stylesheet')
 
   body
@@ -23,10 +24,12 @@ html
             data-module=component.module
             data-address=component.address
             data-channel=component.channel
+            data-speed=component.speed
           )
 
     script(src='/vendor/js/jquery.min.js' type='text/javascript')
     script(src='/vendor/js/bootstrap.min.js' type='text/javascript')
+    script(src='/vendor/js/bootstrap-slider.min.js' type='text/javascript')
     script(src='/vendor/js/bootstrap-toggle.min.js' type='text/javascript')
     script(src='/vendor/js/bootbox.min.js' type='text/javascript')
     script(src='/js/config.js' type='text/javascript')

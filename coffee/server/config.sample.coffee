@@ -9,11 +9,12 @@ exports.layout =
         name: 'Lights'
         address: '01'
         channel: '1'
-        module: 'VMB4RYNO'
+        speed: '2'
+        module: 'VMB4DC'
       }
       {
         name: 'Fan'
-        address: '01'
+        address: '02'
         channel: '2'
         module: 'VMB4RYNO'
       }
@@ -25,11 +26,12 @@ exports.layout =
         name: 'Lights'
         address: '01'
         channel: '3'
-        module: 'VMB4RYNO'
+        speed: '2'
+        module: 'VMB4DC'
       }
       {
         name: 'Fan'
-        address: '01'
+        address: '02'
         channel: '4'
         module: 'VMB4RYNO'
       }

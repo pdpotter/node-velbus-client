@@ -5,6 +5,7 @@ This project should be used in combination with a server, such as
 
 ## Supported modules
 * [VMB4RYNO](http://www.velbus.eu/products/view/?id=383130)
+* [VMB4DC](http://www.velbus.eu/products/view/?id=384234)
 
 ## Installation on Raspberry Pi
 
