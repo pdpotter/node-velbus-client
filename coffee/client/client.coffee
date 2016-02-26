@@ -1,6 +1,6 @@
 # load modules
 modules =
-  VMB4RYNO: require './VMB4RYNO'
+  VMB4RYNO: require './modules/VMB4RYNO'
 
 class Client
   constructor: (server) ->
