@@ -1,6 +1,6 @@
 {
   "name": "node-velbus-client",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Velbus home automation application client",
   "main": "index.js",
   "dependencies": {
