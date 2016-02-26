@@ -21,8 +21,6 @@ class Client
       # add a leading 0 if necessary
       if data.address.length < 2
         data.address = "0" + data.address
-      element = $ "[data-address='#{data.address}']" +
-                  "[data-channel='#{data.channel}']"
       if (data.address + '_' + data.channel) of components
         try
           components[data.address + '_' + data.channel].process data
