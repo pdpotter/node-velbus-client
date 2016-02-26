@@ -17,6 +17,10 @@ class Client
     # listen for data
     @connection.onmessage = (message) ->
       data = JSON.parse message.data
+      # address must contain two hexadecimal symbols
+      # add a leading 0 if necessary
+      if data.address.length < 2
+        data.address = "0" + data.address
       element = $ "[data-address='#{data.address}']" +
                   "[data-channel='#{data.channel}']"
       if (data.address + '_' + data.channel) of components
