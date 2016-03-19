@@ -11,15 +11,30 @@
 
   app.use(express["static"]('public'));
 
-  app.get('/', function(req, res) {
-    return res.render('index', {
-      rooms: Config.layout
-    });
-  });
-
-  app.get('/:room', function(req, res) {
-    return res.render('room', {
-      room: Config.layout[req.params.room]
+  app.get('/*', function(req, res) {
+    var breadcrumbs, object, path_array, path_part;
+    path_array = req.path.split('/');
+    object = Config.layout;
+    breadcrumbs = [
+      {
+        url: '/',
+        name: 'Home'
+      }
+    ];
+    while (path_array.length > 0) {
+      path_part = path_array.shift();
+      if (path_part === '') {
+        continue;
+      }
+      object = object[path_part];
+      breadcrumbs.push({
+        url: breadcrumbs[breadcrumbs.length - 1].url + (breadcrumbs.length > 1 ? '/' : '') + path_part,
+        name: object.name
+      });
+    }
+    return res.render('page', {
+      object: object,
+      breadcrumbs: breadcrumbs
     });
   });
 
